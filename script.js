@@ -40,11 +40,23 @@ function fillup(size) {
       container.append(blocks);
     }
   }
+
+
 }
 
+function sliderValue () {
+  let value = document.getElementById('slider').value;
+  value = parseInt(value);
+  return 2 ** value;
+}
 
+let value= sliderValue()
 
-fillup(16);
+console.log(value)
+
+const slide = document.getElementById('slide')
+slide.addEventListener('mouseup', fillup)
+
 
 
 // const blackbtn = document.getElementById('black')
