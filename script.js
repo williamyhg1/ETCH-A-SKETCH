@@ -23,13 +23,14 @@ function fillup(size) {
     for (i = 0; i < 256; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("sixteen");
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "black");
       container.append(blocks);
     }
   } else if (size == 32) {
     for (i = 0; i < 1024; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("thirtytwo");
-
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
       container.append(blocks);
     }
   } else if (size == 64) {
@@ -43,13 +44,11 @@ function fillup(size) {
 
 
 
+fillup(16);
 
-function makeBlack(){
-  fillup(16);
-}
 
-const blackbtn = document.getElementById('black')
-blackbtn.addEventListener('click', makeBlack)
+// const blackbtn = document.getElementById('black')
+// blackbtn.addEventListener('click', makeBlack)
 
 // blocks.addEventListener(
 //         "mouseover",

@@ -20,6 +20,7 @@ body {
   flex-wrap: wrap;
   border: 2px black solid;
   margin: 30px;
+  border-radius: 4px ;
 }
 
 .two {
@@ -27,17 +28,25 @@ body {
   width: 400px;
   border: 2px black solid;
   box-sizing: border-box;
+  border-radius: 7px;
 }
 
-.two:hover {
+/* .two:hover,
+.four:hover,
+.eight:hover,
+.sixteen:hover,
+.thirtytwo:hover,
+.sixtyfour:hover
+ {
   background-color: black;
-}
+} */
 
 .four {
   height: 200px;
   width: 200px;
   border: 2px black solid;
   box-sizing: border-box;
+  border-radius: 6px;
 }
 
 .eight {
@@ -45,6 +54,7 @@ body {
   width: 100px;
   border: 2px black solid;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .sixteen {
@@ -52,6 +62,7 @@ body {
   width: 50px;
   border: 2px black solid;
   box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .thirtytwo {
@@ -59,6 +70,7 @@ body {
   width: 25px;
   border: 2px black solid;
   box-sizing: border-box;
+  border-radius: 3px;
 }
 
 .sixtyfour {
@@ -66,7 +78,10 @@ body {
   width: 12.5px;
   border: 1px black solid;
   box-sizing: border-box;
+  border-radius: 2px;
 }
+
+.
 
 .black {
     background-color: black;
@@ -87,7 +102,7 @@ body {
 .btn {
   color: black;
   font-size: 50px;
-  width: 200px;
+  width: 300px;
   height: 100px;
   border: white 2px solid;
   border-radius: 10px;
@@ -96,7 +111,7 @@ body {
   align-items: center;
   background-color: wheat;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .btn:hover {
