@@ -3,11 +3,15 @@ body {
     justify-content: center;
     background-color:#1f2937;
     ;
+    display: flex;
+    justify-content: space-evenly;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .control-area {
     width: 500px;
     height: 800px;
     background-color: #1f2937;
+
 }
 
 
@@ -17,38 +21,87 @@ body {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-
-
+    border:  2px black solid;
 }
 
-.two-blocks {
-background-color: tomato;
+.two {
+
 height: 400px;
 width: 400px;
-border: 2px white solid;
+border: 2px black solid;
 box-sizing: border-box;
 }
 
-.four-blocks {
-background-color: turquoise;
+.two:hover {
+    background-color: black;
+} 
+
+.four {
+
 height: 200px;
 width: 200px;
-border: 2px white solid;
+border: 2px black solid;
 box-sizing: border-box;
 }
 
-.eight-blocks {
-background-color: yellow;
+.eight {
 height: 100px;
 width: 100px;
-border: 2px white solid;
+border: 2px black solid;
 box-sizing: border-box;
 }
 
-.sixteen-blocks {
-background-color: yellowgreen;
+.sixteen {
 height: 50px;
 width: 50px;
-border: 2px white solid;
+border: 2px black solid;
 box-sizing: border-box;
 }
+
+.thirtytwo {
+    height: 25px;
+    width: 25px;
+    border: 2px black solid;
+    box-sizing: border-box;
+}
+
+.sixtyfour {
+    height: 12.5px;
+    width: 12.5px;
+    border: 1px black solid;
+    box-sizing: border-box;
+}
+
+.control-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.slider-value {
+    color: white;
+}
+
+.reset,
+.rainbow,
+.black,.erase {
+    color: black;
+    font-size: 50px;
+    width: 200px;
+    height: 100px;
+    border: white 2px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.reset:hover{
+    opacity: 0.7;
+}
+
