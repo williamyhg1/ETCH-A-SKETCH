@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color:#1f2937;
+    ;
+}
+.control-area {
+    width: 500px;
+    height: 800px;
+    background-color: #1f2937;
+}
+
+
+.container {
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.two-blocks {
+background-color: tomato;
+height: 400px;
+width: 400px;
+border: 2px white solid;
+box-sizing: border-box;
+}
+
+.four-blocks {
+background-color: turquoise;
+height: 200px;
+width: 200px;
+border: 2px white solid;
+box-sizing: border-box;
+}
+
+.eight-blocks {
+background-color: yellow;
+height: 100px;
+width: 100px;
+border: 2px white solid;
+box-sizing: border-box;
+}
+
+.sixteen-blocks {
+background-color: yellowgreen;
+height: 50px;
+width: 50px;
+border: 2px white solid;
+box-sizing: border-box;
+}
