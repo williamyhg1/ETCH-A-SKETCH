@@ -52,37 +52,32 @@ function fillup(e) {
   }
 }
 
-// Show slider vaue
-// function sliderValue () {
-//   let value = document.getElementById('slider').value;
-//   value = parseInt(value);
-//   return 2 ** value;
-// }
 
-
-
-//Slider
+//Slider element
 const slider = document.getElementById('slider')
-slider.addEventListener('mouseup', fillup)
-
-function removeBlocks(){
-blocks = document.querySelectorAll('.block')  ;
-blocks.forEach((item) => item.remove());
-}
-
-slider.addEventListener('mousedown', removeBlocks)
 
 
 //slider value panel
 const sliderValuePanel = document.getElementById('slider-value')  
 function showSliderValue(e){
-
 let value = e.target.value;
 value = parseInt(value);
-sliderValuePanel.innerHTML= `<p> ${2 ** value} X ${2 ** value} </p>`
+sliderValuePanel.textContent= `${2 ** value} X ${2 ** value}`
 }
 
+// Remove previous settings
+function removeBlocks(){
+blocks = document.querySelectorAll('.block')  ;
+blocks.forEach((item) => item.remove());
+}
+
+// Event listners on slider
 slider.addEventListener('mouseup', showSliderValue)
+slider.addEventListener('mouseup', fillup)
+slider.addEventListener('mousedown', removeBlocks)
+
+
+
 
 
 
