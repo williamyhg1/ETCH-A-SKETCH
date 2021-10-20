@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+// const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 function fillup(e) {
   if (e.target.value == 1) {
@@ -69,7 +69,7 @@ slider.addEventListener("mouseup", showSliderValue);
 slider.addEventListener("mouseup", fillup);
 slider.addEventListener("mousedown", removeBlocks);
 
-// //add class "rainbow", "black" and "earse" to the blocks for background manipulation
+// Color selection
 const blackbtn = document.getElementById("black");
 const erasebtn = document.getElementById("erase");
 const rainbowbtn = document.getElementById("rainbow");
@@ -103,12 +103,11 @@ function makeBlack(e) {
 }
 
 function makeWhite(e) {
-  
   e.target.style.backgroundColor = "white";
 }
 
 function makeRainbow(e) {
-  e.target.style.backgroundColor = "#" + randomColor;
+  e.target.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
 
 
