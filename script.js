@@ -5,81 +5,94 @@ function fillup(e) {
     for (i = 0; i < 4; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-      blocks.setAttribute('id', 'two');
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      blocks.setAttribute("id", "two");
+      blocks.addEventListener(
+        "mouseover",
+        () => (blocks.style.backgroundColor = "#" + randomColor)
+      );
       container.append(blocks);
     }
   } else if (e.target.value == 2) {
     for (i = 0; i < 16; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-      blocks.setAttribute('id', 'four');
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      blocks.setAttribute("id", "four");
+      blocks.addEventListener(
+        "mouseover",
+        () => (blocks.style.backgroundColor = "#" + randomColor)
+      );
       container.append(blocks);
     }
   } else if (e.target.value == 3) {
     for (i = 0; i < 64; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-      blocks.setAttribute('id', 'eight');
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      blocks.setAttribute("id", "eight");
+      blocks.addEventListener(
+        "mouseover",
+        () => (blocks.style.backgroundColor = "#" + randomColor)
+      );
       container.append(blocks);
     }
   } else if (e.target.value == 4) {
     for (i = 0; i < 256; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-      blocks.setAttribute('id', 'sixteen');
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "black");
+      blocks.setAttribute("id", "sixteen");
+      blocks.addEventListener(
+        "mouseover",
+        () => (blocks.style.backgroundColor = "black")
+      );
       container.append(blocks);
     }
   } else if (e.target.value == 5) {
     for (i = 0; i < 1024; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-      blocks.setAttribute('id', 'thirtytwo');
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      blocks.setAttribute("id", "thirtytwo");
+      blocks.addEventListener(
+        "mouseover",
+        () => (blocks.style.backgroundColor = "#" + randomColor)
+      );
       container.append(blocks);
     }
   } else if (e.target.value == 6) {
     for (i = 0; i < 4096; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-      blocks.setAttribute('id', 'sixtyfour');
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "black")
+      blocks.setAttribute("id", "sixtyfour");
+      blocks.addEventListener(
+        "mouseover",
+        () => (blocks.style.backgroundColor = "black")
+      );
       container.append(blocks);
     }
   }
 }
 
-
 //Slider element
-const slider = document.getElementById('slider')
-
+const slider = document.getElementById("slider");
 
 //slider value panel
-const sliderValuePanel = document.getElementById('slider-value')  
-function showSliderValue(e){
-let value = e.target.value;
-value = parseInt(value);
-sliderValuePanel.textContent= `${2 ** value} X ${2 ** value}`
+const sliderValuePanel = document.getElementById("slider-value");
+function showSliderValue(e) {
+  let value = e.target.value;
+  value = parseInt(value);
+  sliderValuePanel.textContent = `${2 ** value} X ${2 ** value}`;
 }
 
 // Remove previous settings
-function removeBlocks(){
-blocks = document.querySelectorAll('.block')  ;
-blocks.forEach((item) => item.remove());
+function removeBlocks() {
+  blocks = document.querySelectorAll(".block");
+  blocks.forEach((item) => item.remove());
 }
 
 // Event listners on slider
-slider.addEventListener('mouseup', showSliderValue)
-slider.addEventListener('mouseup', fillup)
-slider.addEventListener('mousedown', removeBlocks)
+slider.addEventListener("mouseup", showSliderValue);
+slider.addEventListener("mouseup", fillup);
+slider.addEventListener("mousedown", removeBlocks);
 
-
-
-
-
+const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 // const blackbtn = document.getElementById('black')
 // blackbtn.addEventListener('click', makeBlack)
@@ -99,8 +112,6 @@ slider.addEventListener('mousedown', removeBlocks)
 // const sixteenblocks = document.querySelectorAll('sixteen');
 // sixteenblocks.forEach(block => block.addEventListener('mouseover',() => block.style.backgroundColor = "black");
 
-const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-
 // const slider = document.querySelector('.slider-value')
 // function slider() {
 
@@ -112,20 +123,3 @@ reset.addEventListener("click", reload);
 function reload() {
   window.location.reload();
 }
-
-
-//Slider value
-
-// slider.addEventListener('click',(e)=>console.log(e.target))
-
-// function getValue(){
-//   const slidervalue = document.getElementById('slider-value')
-//   const value = document.getElementById('slider').value;
-//   if (value == 1){
-//     slidervalue.textContent = '2 X 2';
-//   } else if (value == 2){
-//     sliderValue.textContent = '4 X 4';
-//   }
-// }
-
-// getValue();
