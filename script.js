@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-// const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 function fillup(e) {
   if (e.target.value == 1) {
@@ -78,7 +77,6 @@ blackbtn.addEventListener("click", addListenerBlack);
 erasebtn.addEventListener("click", addListenerWhite);
 rainbowbtn.addEventListener("click", addListenerRainbow);
 
-
 function addListenerBlack() {
   const blocks = document.querySelectorAll(".block");
   blocks.forEach((node) => node.removeEventListener("mouseover", makeRainbow));
@@ -107,64 +105,10 @@ function makeWhite(e) {
 }
 
 function makeRainbow(e) {
-  e.target.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  e.target.style.backgroundColor =
+    "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
 
-
-
-// function selectBlack() {
-//   const blocks = document.querySelectorAll(".block");
-//   blocks.forEach((node) => node.classList.remove("white"));
-//   blocks.forEach((node) => node.classList.remove("rainbow"));
-//   blocks.forEach((node) => node.classList.add("black"))
-// }
-
-// function erase() {
-//   const blocks = document.querySelectorAll(".block");
-//   blocks.forEach((node) => node.classList.remove("black"));
-//   blocks.forEach((node) => node.classList.remove("rainbow"));
-//   blocks.forEach((node) => node.classList.add("white"));
-// }
-
-// rainbowbtn.addEventListener("click", selectRainbow);
-// blackbtn.addEventListener("click", selectBlack);
-// erasebtn.addEventListener("click", erase);
-
-// function drawBlack(){
-// const blackBlocks = document.querySelectorAll('.black')
-// console.log(blackBlocks[1].target)
-// blackBlocks.forEach(item => console.log(item.target))
-// }
-
-// blocks.addEventListener(
-//   "mouseover",
-//   () => (blocks.style.backgroundColor = "#" + randomColor)
-// );
-
-// const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-
-// const blackbtn = document.getElementById('black')
-// blackbtn.addEventListener('click', makeBlack)
-
-// blocks.addEventListener(
-//         "mouseover",
-//         () => (blocks.style.backgroundColor = "#" + randomColor)
-//       );
-
-// function makeItBlack(){
-//    element.style.backgroundColor = "black"
-// const className = event.target.className;
-//   blocks.classList.remove(className);
-//   blocks.classList.add('.white');
-// }
-
-// const sixteenblocks = document.querySelectorAll('sixteen');
-// sixteenblocks.forEach(block => block.addEventListener('mouseover',() => block.style.backgroundColor = "black");
-
-// const slider = document.querySelector('.slider-value')
-// function slider() {
-
-// }
 
 //Reset Grid
 const reset = document.getElementById("reset");
