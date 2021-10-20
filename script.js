@@ -1,61 +1,88 @@
 const container = document.querySelector(".container");
 
-function fillup(size) {
-  if (size == 2) {
+function fillup(e) {
+  if (e.target.value == 1) {
     for (i = 0; i < 4; i++) {
       const blocks = document.createElement("div");
-      blocks.classList.add("two");
-      container.append(blocks);
-    }
-  } else if (size == 4) {
-    for (i = 0; i < 16; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("four");
-      container.append(blocks);
-    }
-  } else if (size == 8) {
-    for (i = 0; i < 64; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("eight");
-      container.append(blocks);
-    }
-  } else if (size == 16) {
-    for (i = 0; i < 256; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("sixteen");
-      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "black");
-      container.append(blocks);
-    }
-  } else if (size == 32) {
-    for (i = 0; i < 1024; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("thirtytwo");
+      blocks.classList.add("block");
+      blocks.setAttribute('id', 'two');
       blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
       container.append(blocks);
     }
-  } else if (size == 64) {
+  } else if (e.target.value == 2) {
+    for (i = 0; i < 16; i++) {
+      const blocks = document.createElement("div");
+      blocks.classList.add("block");
+      blocks.setAttribute('id', 'four');
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      container.append(blocks);
+    }
+  } else if (e.target.value == 3) {
+    for (i = 0; i < 64; i++) {
+      const blocks = document.createElement("div");
+      blocks.classList.add("block");
+      blocks.setAttribute('id', 'eight');
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      container.append(blocks);
+    }
+  } else if (e.target.value == 4) {
+    for (i = 0; i < 256; i++) {
+      const blocks = document.createElement("div");
+      blocks.classList.add("block");
+      blocks.setAttribute('id', 'sixteen');
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "black");
+      container.append(blocks);
+    }
+  } else if (e.target.value == 5) {
+    for (i = 0; i < 1024; i++) {
+      const blocks = document.createElement("div");
+      blocks.classList.add("block");
+      blocks.setAttribute('id', 'thirtytwo');
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "#" + randomColor);
+      container.append(blocks);
+    }
+  } else if (e.target.value == 6) {
     for (i = 0; i < 4096; i++) {
       const blocks = document.createElement("div");
-      blocks.classList.add("sixtyfour");
+      blocks.classList.add("block");
+      blocks.setAttribute('id', 'sixtyfour');
+      blocks.addEventListener('mouseover',() => blocks.style.backgroundColor = "black")
       container.append(blocks);
     }
   }
-
-
 }
 
-function sliderValue () {
-  let value = document.getElementById('slider').value;
-  value = parseInt(value);
-  return 2 ** value;
+// Show slider vaue
+// function sliderValue () {
+//   let value = document.getElementById('slider').value;
+//   value = parseInt(value);
+//   return 2 ** value;
+// }
+
+
+
+//Slider
+const slider = document.getElementById('slider')
+slider.addEventListener('mouseup', fillup)
+
+function removeBlocks(){
+blocks = document.querySelectorAll('.block')  ;
+blocks.forEach((item) => item.remove());
 }
 
-let value= sliderValue()
+slider.addEventListener('mousedown', removeBlocks)
 
-console.log(value)
 
-const slide = document.getElementById('slide')
-slide.addEventListener('mouseup', fillup)
+//slider value panel
+const sliderValuePanel = document.getElementById('slider-value')  
+function showSliderValue(e){
+
+let value = e.target.value;
+value = parseInt(value);
+sliderValuePanel.innerHTML= `<p> ${2 ** value} X ${2 ** value} </p>`
+}
+
+slider.addEventListener('mouseup', showSliderValue)
 
 
 

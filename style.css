@@ -23,7 +23,7 @@ body {
   border-radius: 4px ;
 }
 
-.two {
+#two {
   height: 400px;
   width: 400px;
   border: 2px black solid;
@@ -41,7 +41,7 @@ body {
   background-color: black;
 } */
 
-.four {
+#four {
   height: 200px;
   width: 200px;
   border: 2px black solid;
@@ -49,7 +49,7 @@ body {
   border-radius: 6px;
 }
 
-.eight {
+#eight {
   height: 100px;
   width: 100px;
   border: 2px black solid;
@@ -57,7 +57,7 @@ body {
   border-radius: 5px;
 }
 
-.sixteen {
+#sixteen {
   height: 50px;
   width: 50px;
   border: 2px black solid;
@@ -65,7 +65,7 @@ body {
   border-radius: 4px;
 }
 
-.thirtytwo {
+#thirtytwo {
   height: 25px;
   width: 25px;
   border: 2px black solid;
@@ -73,7 +73,7 @@ body {
   border-radius: 3px;
 }
 
-.sixtyfour {
+#sixtyfour {
   height: 12.5px;
   width: 12.5px;
   border: 1px black solid;
