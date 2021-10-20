@@ -6,7 +6,6 @@ function fillup(e) {
     for (i = 0; i < 4; i++) {
       const blocks = document.createElement("div");
       blocks.classList.add("block");
-
       blocks.setAttribute("id", "two");
       container.append(blocks);
     }
@@ -82,14 +81,20 @@ rainbowbtn.addEventListener("click", addListenerRainbow);
 
 function addListenerBlack() {
   const blocks = document.querySelectorAll(".block");
+  blocks.forEach((node) => node.removeEventListener("mouseover", makeRainbow));
+  blocks.forEach((node) => node.removeEventListener("mouseover", makeWhite));
   blocks.forEach((node) => node.addEventListener("mouseover", makeBlack));
 }
 function addListenerWhite() {
   const blocks = document.querySelectorAll(".block");
+  blocks.forEach((node) => node.removeEventListener("mouseover", makeBlack));
+  blocks.forEach((node) => node.removeEventListener("mouseover", makeRainbow));
   blocks.forEach((node) => node.addEventListener("mouseover", makeWhite));
 }
 function addListenerRainbow() {
   const blocks = document.querySelectorAll(".block");
+  blocks.forEach((node) => node.removeEventListener("mouseover", makeBlack));
+  blocks.forEach((node) => node.removeEventListener("mouseover", makeWhite));
   blocks.forEach((node) => node.addEventListener("mouseover", makeRainbow));
 }
 
@@ -98,6 +103,7 @@ function makeBlack(e) {
 }
 
 function makeWhite(e) {
+  
   e.target.style.backgroundColor = "white";
 }
 
