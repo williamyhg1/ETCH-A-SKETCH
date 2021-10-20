@@ -108,7 +108,7 @@ function makeWhite(e) {
 }
 
 function makeRainbow(e) {
-  e.target.style.backgroundColor = 'green';
+  e.target.style.backgroundColor = "#" + randomColor;
 }
 
 
