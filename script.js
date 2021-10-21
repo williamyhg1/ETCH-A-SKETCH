@@ -5,14 +5,7 @@ function fillup(e) {
   for (i = 0; i < 4 ** n; i++) {
     const blocks = document.createElement("div");
     blocks.classList.add("block");
-    let grid = [
-      "two",
-      "four",
-      "eight",
-      "sixteen",
-      "thirtytwo",
-      "sixtyfour",
-    ];
+    let grid = ["two", "four", "eight", "sixteen", "thirtytwo", "sixtyfour"];
     blocks.setAttribute("id", grid[n - 1]);
     container.append(blocks);
   }
