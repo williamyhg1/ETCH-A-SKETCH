@@ -1,48 +1,20 @@
 const container = document.querySelector(".container");
 
 function fillup(e) {
-  if (e.target.value == 1) {
-    for (i = 0; i < 4; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("block");
-      blocks.setAttribute("id", "two");
-      container.append(blocks);
-    }
-  } else if (e.target.value == 2) {
-    for (i = 0; i < 16; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("block");
-      blocks.setAttribute("id", "four");
-      container.append(blocks);
-    }
-  } else if (e.target.value == 3) {
-    for (i = 0; i < 64; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("block");
-      blocks.setAttribute("id", "eight");
-      container.append(blocks);
-    }
-  } else if (e.target.value == 4) {
-    for (i = 0; i < 256; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("block");
-      blocks.setAttribute("id", "sixteen");
-      container.append(blocks);
-    }
-  } else if (e.target.value == 5) {
-    for (i = 0; i < 1024; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("block");
-      blocks.setAttribute("id", "thirtytwo");
-      container.append(blocks);
-    }
-  } else if (e.target.value == 6) {
-    for (i = 0; i < 4096; i++) {
-      const blocks = document.createElement("div");
-      blocks.classList.add("block");
-      blocks.setAttribute("id", "sixtyfour");
-      container.append(blocks);
-    }
+  let n = e.target.value;
+  for (i = 0; i < 4 ** n; i++) {
+    const blocks = document.createElement("div");
+    blocks.classList.add("block");
+    let grid = [
+      "two",
+      "four",
+      "eight",
+      "sixteen",
+      "thirtytwo",
+      "sixtyfour",
+    ];
+    blocks.setAttribute("id", grid[n - 1]);
+    container.append(blocks);
   }
 }
 
@@ -108,7 +80,6 @@ function makeRainbow(e) {
   e.target.style.backgroundColor =
     "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
-
 
 //Reset Grid
 const reset = document.getElementById("reset");
