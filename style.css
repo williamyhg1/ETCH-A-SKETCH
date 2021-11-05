@@ -5,8 +5,8 @@ body {
   display: flex;
   justify-content: space-evenly;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin: 20px;
 }
+
 .control-area {
   width: 500px;
   height: 800px;
